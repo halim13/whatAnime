@@ -25,8 +25,8 @@ const HomeScreen = ({navigation}) => {
           const source = {uri: response.uri, type: response.type};
           ImgToBase64.getBase64String(source.uri)
             .then(base64String => {
-			//   const source64 = `data:${source.type};base64,${base64String}` 
-			  const source64 = `${base64String}`
+			  const source64 = `data:${source.type};base64,${base64String}` 
+			//   const source64 = `${base64String}`
 			  console.log({ source64 })
               navigation.navigate('Detail', {source64})
             })
